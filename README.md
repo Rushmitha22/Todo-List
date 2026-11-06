@@ -894,6 +894,9 @@ if (localStorage.getItem("darkMode") === "true") {
 showTasks();
 ```
 ## OUTPUT
+![alt text](<Screenshot 2026-11-06 102854.png>)
+![alt text](<Screenshot 2026-11-06 103410.png>)
+![alt text](<Screenshot 2026-11-06 103429.png>)
 
 ## RESULT
 The program for creating To-do list using JavaScript is executed successfully.
