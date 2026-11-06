@@ -1,0 +1,155 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bloom Desk - My Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="dashboard">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <h2>🌸 Bloom Desk</h2>
+        <p class="side-label">MENU</p>
+
+        <button class="nav active" data-filter="All">⌂ Dashboard</button>
+        <button class="nav" data-filter="All">▤ All Tasks</button>
+        <button class="nav" data-filter="Pending">◷ Pending</button>
+        <button class="nav" data-filter="Completed">✓ Completed</button>
+
+        <p class="side-label">CATEGORIES</p>
+        <button class="nav" data-category="College">📚 College</button>
+        <button class="nav" data-category="Personal">💗 Personal</button>
+        <button class="nav" data-category="Work">💼 Work</button>
+
+        <div class="sidebar-bottom">
+            <button onclick="toggleTheme()">☾ Change Theme</button>
+        </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main">
+
+        <header>
+            <div>
+                <h1>Good Morning! 🌷</h1>
+                <p>Let's make today productive.</p>
+            </div>
+            <div class="header-right">
+                <span id="today"></span>
+                <div class="profile">R</div>
+            </div>
+        </header>
+
+        <section class="stats">
+            <div class="stat pink">
+                <p>Total Tasks</p>
+                <h2 id="total">0</h2>
+            </div>
+            <div class="stat orange">
+                <p>Pending</p>
+                <h2 id="pending">0</h2>
+            </div>
+            <div class="stat green">
+                <p>Completed</p>
+                <h2 id="completed">0</h2>
+            </div>
+            <div class="stat purple">
+                <p>Overdue</p>
+                <h2 id="overdue">0</h2>
+            </div>
+        </section>
+
+        <section class="task-section">
+            <div class="task-heading">
+                <div>
+                    <h2 id="sectionTitle">My Tasks</h2>
+                    <p>Manage your daily activities</p>
+                </div>
+                <input type="text" id="search"
+                    placeholder="Search tasks..." oninput="showTasks()">
+            </div>
+
+            <div class="task-filters">
+                <select id="priorityFilter" onchange="showTasks()">
+                    <option value="All">All Priorities</option>
+                    <option value="High">High</option>
+                    <option value="Medium">Medium</option>
+                    <option value="Low">Low</option>
+                </select>
+
+                <select id="sort" onchange="showTasks()">
+                    <option value="default">Default Order</option>
+                    <option value="date">Due Date</option>
+                    <option value="priority">Priority</option>
+                </select>
+            </div>
+
+            <div id="taskList" class="task-list"></div>
+        </section>
+
+    </main>
+
+    <!-- Right Panel -->
+    <aside class="right-panel">
+
+        <section class="quick-add">
+            <h2>Quick Add ✨</h2>
+            <p>Add a new task to your list</p>
+
+            <input type="text" id="taskInput"
+                placeholder="What needs to be done?">
+
+            <label>Due Date</label>
+            <input type="date" id="dueDate">
+
+            <label>Category</label>
+            <select id="category">
+                <option>College</option>
+                <option>Personal</option>
+                <option>Work</option>
+                <option>Other</option>
+            </select>
+
+            <label>Priority</label>
+            <select id="priority">
+                <option value="Low">Low</option>
+                <option value="Medium">Medium</option>
+                <option value="High">High</option>
+            </select>
+
+            <button class="add-btn" onclick="addTask()">+ Add Task</button>
+        </section>
+
+        <section class="progress-card">
+            <h3>My Progress</h3>
+            <div class="progress-circle">
+                <span id="progressPercent">0%</span>
+            </div>
+            <p id="progressText">Start completing your tasks!</p>
+        </section>
+
+        <section class="upcoming">
+            <h3>Upcoming Deadlines</h3>
+            <div id="upcomingList"></div>
+        </section>
+
+    </aside>
+
+</div>
+
+<!-- YOUR NAME AND REGISTRATION NUMBER -->
+<footer>
+    Designed & Developed by RUSHMITHA R
+    <br>
+    Registration Number : 212224040281
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
