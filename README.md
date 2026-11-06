@@ -2,10 +2,10 @@
 ## NAME : RUSHMITHA  R
 ## REGISTRATION NUMBER : 212224040281
 ### Date : 06/11/2026
-# AIM
+## AIM
 To create a To-do Application with all features using JavaScript.
 
-# ALGORITHM
+## ALGORITHM
 ### STEP 1:
 Build the HTML structure (index.html).
 
@@ -36,7 +36,7 @@ Deploy the website.
 ### STEP 10:
 Upload to GitHub Pages for free hosting.
 
-# PROGRAM
+## PROGRAM
 
 index.html
 
@@ -893,7 +893,7 @@ if (localStorage.getItem("darkMode") === "true") {
 
 showTasks();
 ```
-# OUTPUT
+## OUTPUT
 
-# RESULT
+## RESULT
 The program for creating To-do list using JavaScript is executed successfully.
